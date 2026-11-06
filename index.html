@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IntelliStudy | Learn Differently</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <a class="brand" href="#">
+        <span class="brand-mark">i.</span>
+        <span>IntelliStudy</span>
+      </a>
+
+      <button class="new-chat" id="newChat">＋ &nbsp; New session</button>
+
+      <p class="side-label">WORKSPACE</p>
+      <nav>
+        <button class="nav-btn active" data-view="study">◈ &nbsp; Study room</button>
+        <button class="nav-btn" data-view="personal">◎ &nbsp; AI companion</button>
+        <button class="nav-btn" data-view="files">▤ &nbsp; Knowledge vault</button>
+        <button class="nav-btn" data-view="search">⌕ &nbsp; Explore</button>
+      </nav>
+
+      <div class="history-heading">
+        <span>YOUR SESSIONS</span><span>◷</span>
+      </div>
+      <div id="historyList" class="history-list"></div>
+
+      <div class="sidebar-bottom">
+        <div class="online"><span></span> Your private workspace</div>
+        <div class="profile">
+          <div class="avatar">IS</div>
+          <div><strong>My Workspace</strong><small>Learning mode</small></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <span class="crumb">INTELLISTUDY</span>
+          <span class="slash"> / </span>
+          <span id="breadcrumbCurrent">Study room</span>
+        </div>
+        <div class="top-status"><span></span> PERSONAL LEARNING SPACE</div>
+      </header>
+
+      <div class="workspace">
+        <section class="hero" id="welcomeSection">
+          <div class="hero-kicker"><span class="sparkle">✳</span> YOUR IDEAS, IN MOTION</div>
+          <h1>Don't just study.<br><span>Understand everything.</span></h1>
+          <p class="hero-description">
+            A space to ask boldly, explore deeply, and turn complicated
+            concepts into knowledge that stays with you.
+          </p>
+
+          <div class="prompt-box">
+            <span class="prompt-symbol">↳</span>
+            <input id="heroPrompt" type="text"
+              placeholder="What are you curious about today?">
+            <button id="heroAsk" aria-label="Ask question">↗</button>
+          </div>
+
+          <div class="suggestions">
+            <span>TRY ASKING</span>
+            <button data-prompt="Explain artificial intelligence with simple real-world examples.">Explain AI simply ↗</button>
+            <button data-prompt="Help me make a study plan for my next exam.">Plan my study ↗</button>
+          </div>
+        </section>
+
+        <section class="tools-section">
+          <div class="section-title">
+            <div>
+              <span class="section-kicker">YOUR LEARNING TOOLKIT</span>
+              <h2>Choose your next move.</h2>
+            </div>
+            <span class="tool-count">04 MODES</span>
+          </div>
+
+          <div class="tool-grid">
+            <button class="tool-card" data-prompt="Explain a difficult concept step by step with examples and a simple summary.">
+              <span class="tool-number">01</span>
+              <span class="tool-icon mint">↗</span>
+              <strong>Concept decoder</strong>
+              <span class="tool-description">Make hard ideas feel easy.</span>
+              <span class="tool-arrow">↗</span>
+            </button>
+
+            <button class="tool-card" data-prompt="Summarize my study materials into revision notes with headings, definitions, and key points.">
+              <span class="tool-number">02</span>
+              <span class="tool-icon gold">▤</span>
+              <strong>Note architect</strong>
+              <span class="tool-description">Turn pages into clear notes.</span>
+              <span class="tool-arrow">↗</span>
+            </button>
+
+            <button class="tool-card" data-prompt="Create a practice quiz with multiple-choice questions and explanations from my study materials.">
+              <span class="tool-number">03</span>
+              <span class="tool-icon violet">⌁</span>
+              <strong>Quiz arena</strong>
+              <span class="tool-description">Challenge your understanding.</span>
+              <span class="tool-arrow">↗</span>
+            </button>
+
+            <button class="tool-card" data-prompt="Answer using evidence from my uploaded study materials and identify which claims are supported.">
+              <span class="tool-number">04</span>
+              <span class="tool-icon coral">✓</span>
+              <strong>Evidence lens</strong>
+              <span class="tool-description">Check answers against sources.</span>
+              <span class="tool-arrow">↗</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="conversation" id="conversation">
+          <div id="messages" aria-live="polite"></div>
+        </section>
+
+        <section class="chat-dock">
+          <div id="documentList" class="document-list"></div>
+          <form id="chatForm" class="chat-input">
+            <label for="fileInput" class="upload" title="Attach study materials">＋</label>
+            <input id="fileInput" type="file"
+              accept=".pdf,.txt,.png,.jpg,.jpeg,.webp" multiple hidden>
+            <textarea id="question" rows="1"
+              placeholder="Ask a question, explore an idea..."></textarea>
+            <button class="send" type="submit" aria-label="Send">↑</button>
+          </form>
+          <div class="dock-footer">
+            <span>✳ Think freely. Learn deeply.</span>
+            <span id="verificationStatus">Evidence verification: not connected</span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
