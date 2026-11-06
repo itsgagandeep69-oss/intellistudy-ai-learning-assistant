@@ -209,10 +209,6 @@ Accepts a question and optional document context.
 
 The primary objective of IntelliStudy is to make learning more interactive, accessible, and effective by combining Generative AI, document-based knowledge retrieval, and answer verification into a unified learning platform.
 
-
-
-GitHub: https://github.com/YOUR_USERNAME
-
 ---
 
 ⭐ If you find this project interesting, consider giving it a star!
