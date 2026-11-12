@@ -69,7 +69,7 @@ IntelliStudy/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/intellistudy-ai-learning-assistant.git
+git clone https://github.com/itsgagandeep69-oss/intellistudy-ai-learning-assistant
 ```
 
 ```bash
